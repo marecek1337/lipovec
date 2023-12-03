@@ -1,7 +1,8 @@
 {
-  "name": "@marecek1337/obec-lipovec",
+  "name": "@marecek1337/lipovec",
   "version": "0.1.0",
   "private": false,
+  "type": "module",
   "scripts": {
     "deploy": "node scripts/gh-pages-deploy.js",
     "serve": "vue-cli-service serve",
