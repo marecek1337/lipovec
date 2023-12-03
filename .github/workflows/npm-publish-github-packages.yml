@@ -1,11 +1,10 @@
-# This workflow will run tests using node and then publish a package to GitHub Packages when a release is created
-# For more information see: https://docs.github.com/en/actions/publishing-packages/publishing-nodejs-packages
-
-name: Node.js Package
+name: Node.js Package and GitHub Pages Deployment
 
 on:
+  push:
+    branches: [ main ]  # Trigger on pushes to the main branch
   release:
-    types: [created]
+    types: [created]    # Trigger on release creation
 
 jobs:
   build:
@@ -20,6 +19,7 @@ jobs:
 
   publish-gpr:
     needs: build
+    if: github.event_name == 'release'  # Run only for releases
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -34,3 +34,29 @@ jobs:
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
+  deploy:
+    needs: build
+    if: github.ref == 'refs/heads/main'  # Run only for pushes to main
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build  # Builds your Vue.js project
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages  # Deployment branch
+          FOLDER: dist  # Folder containing the build to deploy
+          CLEAN: true  # Automatically clean up orphaned deployment commits
