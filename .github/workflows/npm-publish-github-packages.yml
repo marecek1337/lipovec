@@ -56,7 +56,8 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages  # Deployment branch
-          FOLDER: dist  # Folder containing the build to deploy
-          CLEAN: true  # Automatically clean up orphaned deployment commits
+          GITHUB_TOKEN: ${{ secrets.GH_PAGES_DEPLOY }}  # Updated to use PAT
+          BRANCH: gh-pages
+          FOLDER: dist
+          CLEAN: true
+
