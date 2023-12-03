@@ -1,5 +1,5 @@
 <template>
-test
+test2
   <div id="blog-posts">
     <ImageSlider />
     <h2 class="blog-title">Najnovšie udalosti</h2>
