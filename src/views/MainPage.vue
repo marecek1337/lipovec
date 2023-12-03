@@ -1,8 +1,8 @@
 <template>
-test2
+test2222222222222
   <div id="blog-posts">
     <ImageSlider />
-    <h2 class="blog-title">Najnovšie udalosti</h2>
+    <h2 class="blog-title">Najnovšie udalosti test2222222222222</h2>
     <div class="blog-posts">
       <div v-for="post in posts" :key="post.id" class="blog-post" @click="navigateToPost(post.id)">
         <MarkdownRenderer :source="post.content" />
