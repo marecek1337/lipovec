@@ -1,0 +1,32 @@
+{
+  "LoginPage": {
+    "Name":"Name",
+    "Password":"Password",
+    "Submit":"Submit",
+    "Login":"Login"
+  },
+  "NavigationBar": {
+    "Subjects":"Subjects",
+    "NewCheck":"New Check",
+    "Search":"Search",
+    "Generate":"Generate report"
+  },
+  "ListOfSubjectChecks": {
+    "Title":"Assignments from the course",
+    "Name":"Problemset",
+    "Start":"Start date",
+    "End":"End date",
+    "Matches":"Matches",
+    "Checked":"Checked",
+    "Status":"Status",
+    "Subject":"Subject"
+  },
+  "ListOfMatches":{
+    "Title":"List of matches from",
+    "Title2":"List of suspicious codes from",
+    "Student":"Student",
+    "Comment":"Comment",
+    "Decision":"Decision",
+    "Reason":"Reason"
+  }
+}

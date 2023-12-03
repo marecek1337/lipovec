@@ -1,0 +1,32 @@
+{
+  "LoginPage": {
+    "Name":"Meno",
+    "Password":"Heslo",
+    "Submit":"Potvrdiť",
+    "Login":"Prihlásenie"
+  },
+  "NavigationBar": {
+    "Subjects":"Predmety",
+    "NewCheck":"Nová kontrola",
+    "Search":"Hľadať",
+    "Generate":"Generovať report"
+  },
+  "ListOfSubjectChecks": {
+    "Title":"Zadania z predmetu",
+    "Name":"Problemset",
+    "Start":"Začiatok",
+    "End":"Koniec",
+    "Matches":"Zhody",
+    "Checked":"Skontrolované",
+    "Status":"Status",
+    "Subject":"Predmet"
+  },
+  "ListOfMatches":{
+    "Title":"Zoznam zhôd pre zadanie",
+    "Title2":"Zoznam podozrivých kódov pre zadanie",
+    "Student":"Študent",
+    "Comment":"Komentár",
+    "Decision":"Rozhodnutie",
+    "Reason":"Dôvod"
+  }
+}
