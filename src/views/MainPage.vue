@@ -1,4 +1,5 @@
 <template>
+test
   <div id="blog-posts">
     <ImageSlider />
     <h2 class="blog-title">Najnovšie udalosti</h2>
