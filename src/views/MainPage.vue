@@ -1,8 +1,7 @@
 <template>
-test2222222222222
   <div id="blog-posts">
     <ImageSlider />
-    <h2 class="blog-title">Najnovšie udalosti test2222222222222</h2>
+    <h2 class="blog-title">Najnovšie udalosti</h2>
     <div class="blog-posts">
       <div v-for="post in posts" :key="post.id" class="blog-post" @click="navigateToPost(post.id)">
         <MarkdownRenderer :source="post.content" />
@@ -35,7 +34,7 @@ export default {
     },
     loadMarkdownFiles() {
       const markdownContext = require.context('@/../public/documents/Dolezite', false, /\.md$/);
-      const filenames = markdownContext.keys().slice(-3); // Get the latest 3 files
+      const filenames = markdownContext.keys().slice(-4); // Get the latest 3 files
       filenames.forEach(filename => {
         const markdownModule = markdownContext(filename);
         let content = markdownModule.default || markdownModule;
@@ -56,9 +55,9 @@ export default {
 <style scoped>
 .blog-title {
   text-align: center;
-  color: #333;
+  color: #000000;
   font-family: Playfair Display;
-  font-size: 40px;
+  font-size: 50px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -68,18 +67,19 @@ export default {
 
 .blog-posts {
   display: flex;
+  text-align: left;
   justify-content: space-around;
   flex-wrap: wrap;
   margin-bottom: 10%;
 }
 
 .blog-post {
-  height: 352px;
-  width: calc(25% - 55px);
-  background-color: #F5F5F5;
+  height: 300px;
+  width: 20%;
+  background-color: #F9F8F8;
   padding: 20px;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
+  box-shadow: 2px 2px 8px rgba(239,134,91, 0.3);
+  border-radius: 15px;
   box-sizing: border-box;
   transition: transform 0.3s ease;
   text-decoration: none;
@@ -88,16 +88,16 @@ export default {
 }
 
 .post-title {
-  color: #000;
+  color: #000000;
   font-family: Playfair Display;
-  font-size: 20px;
+  font-size: 200px;
   font-weight: bold;
   border-bottom: 2px solid #EF865B;
   padding-bottom: 10px;
   margin-bottom: 15px;
 }
 
-.post-content {
+ .post-content {
   color: #333;
   font-family: Playfair Display;
   font-size: 12px;
@@ -105,6 +105,6 @@ export default {
 
 .blog-post:hover {
   transform: translateY(-10px);
-  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 12px rgba(239,134,91, 0.5);
 }
 </style>

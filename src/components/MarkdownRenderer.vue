@@ -1,5 +1,5 @@
 <template>
-  <div v-html="renderedContent"></div>
+  <div v-html="renderedContent" class="a"></div>
 </template>
 
 <script>
@@ -23,3 +23,12 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+.a {
+  text-align: center;
+  font-family: Playfair Display;
+  font-size: 80%;
+}
+
+</style>

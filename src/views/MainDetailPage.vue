@@ -38,8 +38,8 @@ methods: {
 
 <style scoped>
 .markdown-container {
-  width: 80%;        /* Set width to 80% of the parent container */
+  width:60%;        /* Set width to 80% of the parent container */
   margin: 0 auto;    /* Center the container */
-  text-align: left;  /* Optional: if you want the text inside to be aligned left */
+  text-align:start;  /* Optional: if you want the text inside to be aligned left */
 }
 </style>

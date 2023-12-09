@@ -61,8 +61,7 @@ export default {
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: 50vh;
-  /* Adjust the height as necessary */
+  height: 50vh; /* Adjust the height as necessary */
 }
 
 .image {
@@ -76,35 +75,48 @@ export default {
 
 .image--fade {
   transition: opacity 1.3s ease;
-  /* Adjust the timing as necessary */
   opacity: 0;
 }
 
 
 .nav-button:hover {
   opacity: 0.5;
-  /* Optional: slightly fade the button on hover */
 }
 
 .nav-button.prev {
   left: 10px;
-  /* Adjust as necessary */
 }
 
 .nav-button.next {
   right: 10px;
-  /* Adjust as necessary */
 }
 
-/* Remove default button styles on focus */
-.nav-button:focus {
-  outline: none;
-  border: none;
-  box-shadow: none;
+
+/* Responsive adjustments */
+@media (max-width: 1350px) { /* Tablet */
+  .image-container {
+  margin-top: 77px;
+}
 }
 
-/* Optional: styles for disabled state */
-.nav-button:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}</style>
+/* Responsive adjustments */
+@media (max-width: 768px) { /* Tablet */
+  .image-container {
+    height: 30vh; /* Adjust for smaller screens */
+  }
+
+  .nav-button {
+    padding: 8px; /* Smaller buttons */
+  }
+}
+
+@media (max-width: 480px) { /* Mobile */
+  .image-container {
+    height: 20vh; /* Adjust for smaller screens */
+  }
+
+  .nav-button {
+    padding: 5px; /* Even smaller buttons */
+  }
+}
+</style>
